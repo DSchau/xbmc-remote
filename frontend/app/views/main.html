@@ -1,0 +1,5 @@
+<div class="row">
+	<a class="btn btn-sm col-sm-6 col-md-4" ng-class="{ 'btn-danger': videoService.danger, 'btn-primary': !videoService.danger }" ng-repeat="videoService in videoLibrary" ng-click="videoAction(videoService.action);">{{ videoService.display }}</a>
+</div>
+
+<div class="result">{{ data | json }}</div>

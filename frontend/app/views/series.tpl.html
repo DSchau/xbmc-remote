@@ -1,0 +1,33 @@
+<div class="tvShow">
+	<div class="row">
+		<div class="col-xs-12">
+			<a ng-href="http://www.imdb.com/title/{{series.IMDB_ID}}">
+				<img ng-src="http://thetvdb.com/banners/{{ series.banner }}">
+			</a>
+		</div>
+		<div class="col-xs-12 name">
+			<h2>{{ series.SeriesName }}</h2>
+		</div>
+		<div class="col-xs-12 overview">
+			<p>{{ series.Overview }}</p>
+		</div>
+	</div>
+</div>
+
+<div class="tabs">
+	<ul class="nav nav-tabs">
+	  <li ng-repeat="(season, epArr) in episodes | orderBy:season " ng-class="{ 'active': season === '1' }">
+	  	<a data-target="#{{season}}" data-toggle="tab">{{ season }}</a>
+	  </li>
+	</ul>
+	<div class="tab-content">
+	  <div class="tab-pane fade" ng-repeat="(season, epArr) in episodes" id="{{season}}" ng-class="{ 'active in': season === '1' }">
+	  	<ul>
+	  		<li ng-repeat="ep in epArr">
+	  			<a ng-click="playEpisode(ep.episodeid)">{{ ep.label }}</a>
+	  			<span class="glyphicon glyphicon-play-circle"></span>
+	  		</li>
+	  	</ul>
+	  </div>
+	</div>
+</div>

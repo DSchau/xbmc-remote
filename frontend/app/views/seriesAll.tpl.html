@@ -1,0 +1,37 @@
+<div class="showList">
+
+	<div class="input-group">
+	  <span class="glyphicon glyphicon-filter input-group-addon"></span>
+	  <input type="text" class="form-control" placeholder="TV Show" ng-model="tvShow" ng-debounce="350">
+	</div>
+
+	<div class="row" ng-repeat="i in tvShows | chunk:spliceLength">
+		<div class="tvShow col-xs-12 col-sm-6 col-md-4" ng-repeat="series in ( filteredShows = ( tvShows | filter:{SeriesName: tvShow} | orderBy:SeriesName ).slice(i,i+spliceLength) ) track by series.SeriesName">
+			<div class="info" ng-switch="tvShow && tvShow.length > 0">
+				<a ng-href="#/series/{{ series.id }}" ng-switch-when="true">
+					<img ng-src="http://thetvdb.com/banners/{{series.banner}}">
+				</a>
+				<span ng-switch-default>
+					<a ng-href="#/series/{{ series.id }}">
+						<img ng-src="http://thetvdb.com/banners/{{series.poster}}">
+					</a>
+					<div class="name row">
+						<div class="col-sm-12">
+							<h2 class="stars">{{ series.Rating | stars }}<h2>
+						</div>
+					</div>
+					<div class="overview" ng-switch="(series.Overview.length * 0.90) > overviewLimit && !limits[series.SeriesName]">
+						<span ng-switch-when="true">
+							{{ series.Overview | limitTo:overviewLimit }}...
+							<a class="btn btn-primary" ng-click="increaseLimit(series.Overview.length, series.SeriesName)">Show More</a>
+						</span>
+						<span ng-switch-default>
+							{{ series.Overview }}
+						</span>
+					</div>
+				</span>
+			</div>
+		</div>
+	</div>
+
+</div>

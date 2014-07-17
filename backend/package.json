@@ -1,0 +1,9 @@
+{
+  "name": "XBMC_Backend",
+  "version": "1.0.0",
+  "dependencies": {
+    "node-tvdb": "^0.2.6",
+    "jshint": "^2.5.1",
+    "moviedb": "^0.1.4"
+  }
+}

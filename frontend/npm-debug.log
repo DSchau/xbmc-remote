@@ -1,0 +1,91 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/node',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'angular-match-media',
+1 verbose cli   '--save' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 verbose node symlink /usr/bin/node
+5 warn invalid config registry="http:/"
+6 warn invalid config Must be a full url with 'http://'
+7 warn package.json xbmcremote@0.0.0 No description
+8 warn package.json xbmcremote@0.0.0 No repository field.
+9 warn package.json xbmcremote@0.0.0 No README data
+10 warn package.json node-tvdb@0.2.6 No repository field.
+11 verbose readDependencies using package.json deps
+12 verbose cache add [ 'angular-match-media', null ]
+13 verbose cache add name=undefined spec="angular-match-media" args=["angular-match-media",null]
+14 verbose parsed url { protocol: null,
+14 verbose parsed url   slashes: null,
+14 verbose parsed url   auth: null,
+14 verbose parsed url   host: null,
+14 verbose parsed url   port: null,
+14 verbose parsed url   hostname: null,
+14 verbose parsed url   hash: null,
+14 verbose parsed url   search: null,
+14 verbose parsed url   query: null,
+14 verbose parsed url   pathname: 'angular-match-media',
+14 verbose parsed url   path: 'angular-match-media',
+14 verbose parsed url   href: 'angular-match-media' }
+15 silly lockFile f77ad7e3-angular-match-media angular-match-media
+16 verbose lock angular-match-media /home/dschau/.npm/f77ad7e3-angular-match-media.lock
+17 silly lockFile f77ad7e3-angular-match-media angular-match-media
+18 silly lockFile f77ad7e3-angular-match-media angular-match-media
+19 verbose addNamed [ 'angular-match-media', '' ]
+20 verbose addNamed [ null, '*' ]
+21 silly lockFile bade4dcf-angular-match-media angular-match-media@
+22 verbose lock angular-match-media@ /home/dschau/.npm/bade4dcf-angular-match-media.lock
+23 silly addNameRange { name: 'angular-match-media', range: '*', hasData: false }
+24 verbose url raw angular-match-media
+25 verbose url resolving [ 'https://registry.npmjs.org/', './angular-match-media' ]
+26 verbose url resolved https://registry.npmjs.org/angular-match-media
+27 info trying registry request attempt 1 at 02:15:24
+28 http GET https://registry.npmjs.org/angular-match-media
+29 http 404 https://registry.npmjs.org/angular-match-media
+30 verbose headers { date: 'Tue, 24 Jun 2014 07:15:18 GMT',
+30 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+30 verbose headers   'content-type': 'application/json',
+30 verbose headers   'cache-control': 'max-age=0',
+30 verbose headers   'content-length': '52',
+30 verbose headers   'accept-ranges': 'bytes',
+30 verbose headers   via: '1.1 varnish',
+30 verbose headers   age: '0',
+30 verbose headers   'x-served-by': 'cache-ord1723-ORD',
+30 verbose headers   'x-cache': 'MISS',
+30 verbose headers   'x-cache-hits': '0',
+30 verbose headers   'x-timer': 'S1403594118.820199,VS0,VE67',
+30 verbose headers   'keep-alive': 'timeout=10, max=50',
+30 verbose headers   connection: 'Keep-Alive' }
+31 silly registry.get cb [ 404,
+31 silly registry.get   { date: 'Tue, 24 Jun 2014 07:15:18 GMT',
+31 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+31 silly registry.get     'content-type': 'application/json',
+31 silly registry.get     'cache-control': 'max-age=0',
+31 silly registry.get     'content-length': '52',
+31 silly registry.get     'accept-ranges': 'bytes',
+31 silly registry.get     via: '1.1 varnish',
+31 silly registry.get     age: '0',
+31 silly registry.get     'x-served-by': 'cache-ord1723-ORD',
+31 silly registry.get     'x-cache': 'MISS',
+31 silly registry.get     'x-cache-hits': '0',
+31 silly registry.get     'x-timer': 'S1403594118.820199,VS0,VE67',
+31 silly registry.get     'keep-alive': 'timeout=10, max=50',
+31 silly registry.get     connection: 'Keep-Alive' } ]
+32 silly lockFile bade4dcf-angular-match-media angular-match-media@
+33 silly lockFile bade4dcf-angular-match-media angular-match-media@
+34 error 404 404 Not Found: angular-match-media
+34 error 404
+34 error 404 'angular-match-media' is not in the npm registry.
+34 error 404 You should bug the author to publish it
+34 error 404 It was specified as a dependency of 'xbmcremote'
+34 error 404
+34 error 404 Note that you can also install from a
+34 error 404 tarball, folder, or http url, or git url.
+35 error System Linux 3.11.0-23-generic
+36 error command "/usr/bin/node" "/usr/bin/npm" "install" "angular-match-media" "--save"
+37 error cwd /home/dschau/Code/xbmc-remote/frontend
+38 error node -v v0.10.29
+39 error npm -v 1.4.14
+40 error code E404
+41 verbose exit [ 1, true ]

@@ -1,0 +1,32 @@
+<div class="movieList">
+
+	<div class="input-group">
+	  <span class="glyphicon glyphicon-filter input-group-addon"></span>
+	  <input type="text" class="form-control" placeholder="Movie" ng-model="movieFilter">
+	</div>
+
+	<div class="row" ng-repeat="i in movies | chunk:spliceLength">
+		<div class="movie col-xs-12 col-sm-6 col-md-4" ng-repeat="movie in ( filteredMovies = ( movies | filter:{title: movieFilter} | orderBy:title ).slice(i,i+spliceLength) ) track by movie.title">
+			<div class="info">
+				<span>
+					<a ng-href="#/movie/{{ movie.id }}">
+						<img ng-src="http://image.tmdb.org/t/p/original{{movie.poster_path}}">
+					</a>
+					<div class="name">
+						<h2>{{ movie.title }}</h2>
+					</div>
+					<div class="overview" ng-switch="(movie.overview.length * 0.90) > overviewLimit && !limits[movie.title]">
+						<span ng-switch-when="true">
+							{{ movie.overview | limitTo:overviewLimit }}...
+							<a class="btn btn-primary" ng-click="increaseLimit(movie.overview.length, movie.title)">Show More</a>
+						</span>
+						<span ng-switch-default>
+							{{ movie.overview }}
+						</span>
+					</div>
+				</span>
+			</div>
+		</div>
+	</div>
+
+</div>
